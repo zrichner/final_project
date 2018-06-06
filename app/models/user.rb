@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Direct associations
 
+  belongs_to :region
+
   belongs_to :stateorcountry
 
   belongs_to :city
