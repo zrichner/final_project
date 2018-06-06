@@ -12,19 +12,49 @@
       <dd><%= @user.password %></dd>
 
       <dt>City</dt>
-      <dd><%= @user.city_id %></dd>
+      <dd>
+        <% if @user.city.present? %>
+          <a href="/cities/<%= @user.city_id %>">
+            <%= @user.city.name %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Rolefunction</dt>
-      <dd><%= @user.rolefunction_id %></dd>
+      <dd>
+        <% if @user.rolefunction.present? %>
+          <a href="/rolefunctions/<%= @user.rolefunction_id %>">
+            <%= @user.rolefunction.name %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Industry</dt>
-      <dd><%= @user.industry_id %></dd>
+      <dd>
+        <% if @user.industry.present? %>
+          <a href="/industries/<%= @user.industry_id %>">
+            <%= @user.industry.name %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Stateorcountry</dt>
-      <dd><%= @user.stateorcountry_id %></dd>
+      <dd>
+        <% if @user.stateorcountry.present? %>
+          <a href="/stateorcountries/<%= @user.stateorcountry_id %>">
+            <%= @user.stateorcountry.name %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Region</dt>
-      <dd><%= @user.region_id %></dd>
+      <dd>
+        <% if @user.region.present? %>
+          <a href="/regions/<%= @user.region_id %>">
+            <%= @user.region.name %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

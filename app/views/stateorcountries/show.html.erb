@@ -9,7 +9,13 @@
       <dd><%= @stateorcountry.name %></dd>
 
       <dt>Region</dt>
-      <dd><%= @stateorcountry.region_id %></dd>
+      <dd>
+        <% if @stateorcountry.region.present? %>
+          <a href="/regions/<%= @stateorcountry.region_id %>">
+            <%= @stateorcountry.region.name %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

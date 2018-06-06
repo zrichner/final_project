@@ -17,7 +17,13 @@
       <% @cities.each do |city| %>
       <tr>
         <td><%= city.name %></td>
-        <td><%= city.stateorcountry.name %></td>
+        <td>
+          <% if city.stateorcountry.present? %>
+            <a href="/stateorcountries/<%= city.stateorcountry.id %>">
+              <%= city.stateorcountry.name %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/cities/<%= city.id %>" class="btn btn-primary">Show</a>
           <a href="/cities/<%= city.id %>/edit" class="btn btn-warning">Edit</a>
