@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "cities#index"
   # Routes for the Rolefunction resource:
   # CREATE
   get "/rolefunctions/new", :controller => "rolefunctions", :action => "new"
