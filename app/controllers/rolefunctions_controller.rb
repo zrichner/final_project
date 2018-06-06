@@ -1,6 +1,7 @@
 class RolefunctionsController < ApplicationController
   def index
-    @rolefunctions = Rolefunction.page(params[:page]).per(10)
+    @q = Rolefunction.ransack(params[:q])
+    @rolefunctions = @q.result(:distinct => true).includes(:users).page(params[:page]).per(10)
 
     render("rolefunctions/index.html.erb")
   end
