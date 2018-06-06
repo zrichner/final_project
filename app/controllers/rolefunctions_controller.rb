@@ -6,6 +6,7 @@ class RolefunctionsController < ApplicationController
   end
 
   def show
+    @user = User.new
     @rolefunction = Rolefunction.find(params[:id])
 
     render("rolefunctions/show.html.erb")
