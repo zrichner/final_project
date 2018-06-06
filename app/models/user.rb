@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Direct associations
 
+  belongs_to :rolefunction
+
   belongs_to :industry
 
   belongs_to :region
