@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Rolefunction resource:
+  # CREATE
+  get "/rolefunctions/new", :controller => "rolefunctions", :action => "new"
+  post "/create_rolefunction", :controller => "rolefunctions", :action => "create"
+
+  # READ
+  get "/rolefunctions", :controller => "rolefunctions", :action => "index"
+  get "/rolefunctions/:id", :controller => "rolefunctions", :action => "show"
+
+  # UPDATE
+  get "/rolefunctions/:id/edit", :controller => "rolefunctions", :action => "edit"
+  post "/update_rolefunction/:id", :controller => "rolefunctions", :action => "update"
+
+  # DELETE
+  get "/delete_rolefunction/:id", :controller => "rolefunctions", :action => "destroy"
+  #------------------------------
+
   # Routes for the Industry resource:
   # CREATE
   get "/industries/new", :controller => "industries", :action => "new"
