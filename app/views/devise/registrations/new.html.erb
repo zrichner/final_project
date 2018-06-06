@@ -36,6 +36,41 @@
         </div>
 
         <div class="form-group">
+            <%= f.label :city_id, class: "col-sm-2 control-label" %>
+            <div class="col-sm-10">
+              <%= f.select(:city_id, options_from_collection_for_select(City.all, :id, :name, @user.city_id), {}, {:class => "form-control"}) %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :rolefunction_id, class: "col-sm-2 control-label" %>
+            <div class="col-sm-10">
+              <%= f.select(:rolefunction_id, options_from_collection_for_select(Rolefunction.all, :id, :name, @user.rolefunction_id), {}, {:class => "form-control"}) %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :industry_id, class: "col-sm-2 control-label" %>
+            <div class="col-sm-10">
+              <%= f.select(:industry_id, options_from_collection_for_select(Industry.all, :id, :name, @user.industry_id), {}, {:class => "form-control"}) %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :stateorcountry_id, class: "col-sm-2 control-label" %>
+            <div class="col-sm-10">
+              <%= f.select(:stateorcountry_id, options_from_collection_for_select(Stateorcountry.all, :id, :name, @user.stateorcountry_id), {}, {:class => "form-control"}) %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :region_id, class: "col-sm-2 control-label" %>
+            <div class="col-sm-10">
+              <%= f.select(:region_id, options_from_collection_for_select(Region.all, :id, :name, @user.region_id), {}, {:class => "form-control"}) %>
+            </div>
+          </div>
+
+          <div class="form-group">
           <div class="col-sm-10 col-sm-offset-2">
             <%= f.submit "Sign up", class: "btn btn-success btn-block" %>
           </div>
