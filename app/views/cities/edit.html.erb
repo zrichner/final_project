@@ -33,7 +33,7 @@
           Stateorcountry
         </label>
 
-        <input type="text" id="stateorcountry_id" name="stateorcountry_id" placeholder="Stateorcountry" class="form-control" value="<%= @city.stateorcountry_id %>">
+        <%= select_tag(:stateorcountry_id, options_from_collection_for_select(Stateorcountry.all, :id, :name, @city.stateorcountry_id), :class => "form-control") %>
       </div>
 
       <button class="btn btn-warning">
