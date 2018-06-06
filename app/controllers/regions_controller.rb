@@ -1,6 +1,6 @@
 class RegionsController < ApplicationController
   def index
-    @regions = Region.all
+    @regions = Region.page(params[:page]).per(10)
 
     render("regions/index.html.erb")
   end

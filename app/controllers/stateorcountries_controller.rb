@@ -1,6 +1,6 @@
 class StateorcountriesController < ApplicationController
   def index
-    @stateorcountries = Stateorcountry.all
+    @stateorcountries = Stateorcountry.page(params[:page]).per(10)
 
     render("stateorcountries/index.html.erb")
   end
