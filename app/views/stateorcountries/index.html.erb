@@ -17,7 +17,7 @@
       <% @stateorcountries.each do |stateorcountry| %>
       <tr>
         <td><%= stateorcountry.name %></td>
-        <td><%= stateorcountry.region_id %></td>
+        <td><%= stateorcountry.region.name %></td>
         <td>
           <a href="/stateorcountries/<%= stateorcountry.id %>" class="btn btn-primary">Show</a>
           <a href="/stateorcountries/<%= stateorcountry.id %>/edit" class="btn btn-warning">Edit</a>
